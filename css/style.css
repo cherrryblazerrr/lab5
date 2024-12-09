@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body, html {
+    height: 100%;
+    font-family:cursive;
+    margin:0;
+    padding:0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 60px;
+    height: 100vh;
+}
+.item1, .item4 {
+    grid-column: 1 / 4;
+    background-color: lavender;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+    font-size: 120%;
+    padding: 10px;
+}
+.item1 {
+    grid-row: 1 / 2;
+}
+.item2 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 6;
+    background-color: lavenderblush;
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-top: 50px;
+    font-family: cursive;
+    list-style: none;
+    line-height: 40px;
+}
+.item3 {
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    background-color: ghostwhite;
+    color: mediumpurple;
+    font-family: cursive;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.item4 {
+    grid-row: 4 / 5;
+}
+.item5 {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    background-color: thistle;
+    color: mediumpurple;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 110%;
+    font-family:cursive;
+}
+.itemX {
+    background-color: floralwhite;
+    padding: 10px;
+    border: 3px dotted mistyrose;
+    border-radius: 25px;
+    width: 20%;
+    text-align: center;
+}
+.itemY {
+    background-color: floralwhite;
+    padding: 10px;
+    border: 3px dotted mistyrose;
+    border-radius: 25px;
+    width: 30%;
+    text-align: center;
+
+}
+.image-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.image-grid img {
+    width: 40%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.image-item {
+    flex: 1 1 calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+a{
+    transition: background-color 1s;
+    border-radius: 10px;
+}
+a:hover {
+    background-color: pink;
+}
+p.info {
+    margin-top: 0;
+    color: darkslateblue;
+}
+h3.label{
+    color: mistyrose;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 180vh;
+    }
+
+    .item1, .item2, .item3, .item4, .item5{
+        padding: 20px;
+        margin: 0;
+        height: max-content;
+    }
+    #item-3{
+        height: 100em;
+    }
+    .itemX, .itemY{
+        padding: 5px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    h2, h3, p, li {
+        font-size: 0.75em;
+    }
+}
+
+button, output, textarea, input {
+    height: 2.5rem;
+    padding: 0.1rem;
+    margin: 0;
+    border-radius: 1em;
+    color: mistyrose;
+}
+#hint {
+    width: 2.5rem;
+}
+#add-bg-image, #del-bg-image {
+    width: 10.25rem;
+}
+textarea::placeholder { /*Chrome*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+textarea, output { /*Firefox*/
+    padding: 0.35rem 0.1rem;
+    text-align: center;
+}
+input {
+    padding: 0.75em;
+    height: 3.5em;
+}
+button, #block-number, input, output {
+    width: 12rem;
+}
+#print-area {
+    height: 3em;
+}
+#word-form, #bg-image {
+    width: 38rem;
+    height: 3em;
+    line-height: 2;
+}
+textarea {
+    resize: none;
+    overflow: auto;
+    white-space: pre;
+    scrollbar-width: thin;
+}
+input, output {
+    text-align: center;
+}
+button, input, output, textarea {
+    background-color: floralwhite;
+    border: 3px dotted mistyrose;
+}
+button:hover, input:hover, textarea:hover, output:hover {
+    color: mediumpurple;
+    border-color: darkslateblue;
+    background-color: lavender;
+}
+div.wrapper {
+    display: flex;
+}
+div.external-wrapper {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 40dvh;
+    width: 100%;
+    gap: 1rem;
+}
+div.internal-wrapper {
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    width: 100%;
+
+}
+#item-3 {
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+div.item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
